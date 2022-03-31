@@ -1,0 +1,125 @@
+@import url(../reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+@mixin font ($weight, $size,$lineheight, $color) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineheight;
+    color: $color;
+    font-family: 'Roboto', sans-serif;    
+}
+.basket {
+    width: 720px;
+    margin: auto;    
+    .block-text {
+        @include font(400,16px ,19px ,#414141 );
+        display: flex;
+        justify-content: space-between;
+        margin: 40px 0 20px;
+    }
+    &__text-before {
+        text-transform: capitalize;
+        margin: 40px 0 20px;
+        @include font(400, 12px,14px,#969696 );        
+    }
+    &__card-product {
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__card-main{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__img {
+        margin: 0 40px 23px 20px;
+    }
+    &__card{
+        &-property{
+            @include font(400,12px ,14px ,#414141 );
+            margin-right: 10px;
+        }
+        &-meaning{
+            @include font(400,12px ,14px ,#9E9E9E );
+            margin-right: 15px;
+        }
+    }
+   &__card-info{
+       display: flex;
+       flex-direction: row;
+   }
+   &__button{
+    width: 30px;
+    height: 120px;   
+    background: #F9F9F9;
+    border: none;
+   }
+   .square-color{
+    width: 14px;
+    height: 14px;   
+    margin-right: 10px;
+   }
+}
+.backet__card-main{
+    display: flex;
+    justify-content: space-between;
+    @include font(500,16px ,19px , #414141 );
+    margin-bottom: 20px;
+}
+.square-beidge{
+    background-color: #CCBEB1;
+}
+.square-blue{
+    background: #353E4D;
+}
+.square-pink{
+    background: #AF527E;;
+}
+.square-gray{
+    background: #6F6C67;;
+}
+.last-block{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    &__coast{
+        @include font(400,14px ,16px ,#414141 );
+        margin-right: 15px;
+    }
+    &__number{
+        @include font(500,16px ,19px ,#414141 );
+        margin-right: 25px;
+    }
+    &__button{
+        width: 202px;
+        height: 40px;
+        background: #245462;
+        border: none;
+        @include font(400,13px ,15px ,#FFFFFF );
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+}
+.price-sale{
+    text-decoration-line: line-through; /*зачеркивает везде, не понимаю, как зачеркнуть только один span*/
+    @include font(500,12px ,14px ,#CCCCCC );
+    
+    &:before{
+        text-decoration-line:none; /* не отеняет*/
+        content: url(../../img/sale.png) '-25%';
+        margin-right: 20px;
+        @include font(400,12px ,14px ,#000000 );
+    }
+    &::after{
+        content: '28 490₽';
+        @include font(500,16px ,19px ,#414141 );
+        margin-left: 15px;
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "lesson",
+  "version": "1.0.0",
+  "description": "example",
+  "source": "./src/index.html",
+  "scripts": {
+    "test": "test",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nastassia-and/lesson.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nastassia-and/lesson/issues"
+  },
+  "homepage": "https://github.com/Nastassia-and/lesson#readme",
+  "dependencies": {
+    "parcel": "^2.4.1",
+    "sass": "^1.49.10",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1"
+  }
+}
